@@ -1,112 +1,261 @@
-import Image from "next/image";
+import { StarIcon } from '@heroicons/react/16/solid';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const icon = '/peakpx.jpg';
+const paragvai = '/paragvai.jpg';
+const paris = '/paris.jpg';
+const shrilanka = '/shrilanka.jpg';
+const avatarIcon = '/avatar_icon.png';
+const istock = '/duomo-fotor.jpg';
+
+const tours = [
+  {
+    name: 'Арзан турлар',
+    countries: [
+      { value: 'Вьетнам', price: '150 000 тг' },
+      { value: 'Грузия', price: '160 000 тг' },
+      { value: 'Армания', price: '154 000 тг' },
+      { value: 'Марокко', price: '130 000 тг' },
+      { value: 'Черногория', price: '210 000 тг' },
+      { value: 'Турция', price: '180 000 тг' },
+    ],
+  },
+  {
+    name: 'Қала турлар',
+    countries: [
+      { value: 'Рим, Италия', price: '230 000 тг' },
+      { value: 'Париж, Франция', price: '350 000 тг' },
+      { value: 'Венеция, Италия', price: '400 000 тг' },
+      { value: 'Сан-Франциско, АҚШ', price: '270 000 тг' },
+      { value: 'Нью-Йорк, АҚШ', price: '380 000 тг' },
+      { value: 'Дубай', price: '250 000 тг' },
+    ],
+  },
+  {
+    name: 'Табиғатта демалу турлар',
+    countries: [
+      { value: 'Венеция, Италия', price: '280 000 тг' },
+      { value: 'Будапешт, Венгрия', price: '580 000 тг' },
+      { value: 'Прага, Чехия', price: '480 000 тг' },
+      { value: 'Флоренция, Италия', price: '380 000 тг' },
+      { value: 'М№нхен, Гурмания', price: '340 000 тг' },
+      { value: 'Стамбул, Турция', price: '290 000 тг' },
+    ],
+  },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <div
+        className="w-full h-[800px] flex justify-center items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${icon})`,
+        }}
+      >
+        <div className="w-full flex justify-between items-center px-4 lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+          <div className="text-white space-y-4">
+            <p className="text-sm opacity-80">Сіздің саяхатыңызды сәтті өткізу үшін</p>
+            <h1 className="text-5xl">БІЗДІҢ ӘУЕЖАЙ</h1>
+          </div>
+          <form className="bg-white w-[19rem] flex flex-col items-center px-8 py-8 text-xs text-zinc-600">
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Қайдан?</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Қайда?</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Бару күні:</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Қайту күні:</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Ересек адамдар саны:</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Балалар саны:</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Атыңыз:</label>
+              <input className="w-full p-1" />
+            </div>
+            <div className="flex items-center gap-4 border-t py-2.5 w-full">
+              <label className="whitespace-nowrap flex-shrink-0">Телефон номеріңіз:</label>
+              <input className="w-full p-1" />
+            </div>
+            <button className="px-6 py-2.5 mt-1 bg-amber-400 text-sm w-fit text-white uppercase">
+              Брондау
+            </button>
+          </form>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="relative overflow-hidden">
+        <div className="w-full lg:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-col gap-32 mx-auto">
+          <div className="w-full mt-24 mb-20">
+            <div className="w-full text-center mb-16">
+              <h1 className="text-4xl font-medium">Сұранысқа ие елді мекендер</h1>
+              <p className="text-xs mt-3 text-zinc-500">
+                Саяхат - бұл біздің ақыл-ойымыздың созылу тәсілі (Ральф Крошоу)
+              </p>
+            </div>
+            <div className="flex justify-center gap-5">
+              <div className="relative">
+                <Image
+                  width={300}
+                  height={197.66}
+                  src={paragvai}
+                  alt="Logo"
+                  className="object-center"
+                />
+                <div className="absolute flex flex-col text-white top-20 left-[6rem] text-center">
+                  <span className="font-medium">Таудағы өзен</span>
+                  <span className="text-xs">Парагвай</span>
+                </div>
+              </div>
+              <div className="relative">
+                <Image width={300} height={150} src={paris} alt="Logo" className="object-center" />
+                <div className="absolute flex flex-col text-white top-20 left-[6.5rem] text-center">
+                  <span className="font-medium">Арман қала</span>
+                  <span className="text-xs">Париж</span>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  width={300}
+                  height={150}
+                  src={shrilanka}
+                  alt="Logo"
+                  className="object-center"
+                />
+                <div className="absolute flex flex-col text-white top-20 left-[6rem] text-center">
+                  <span className="font-medium">Бұлтты таулар</span>
+                  <span className="text-xs">Шри Ланка</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="w-full mb-16">
+            <div className="w-full text-center mb-20">
+              <h1 className="text-4xl font-medium">Біз сізге ең арзан бағаларды ұсынамыз</h1>
+              <p className="text-xs mt-3 text-zinc-500">
+                Саяхат адамның барлық эмойияларын ұлғайтуға бейім (Питкр Хиг)
+              </p>
+            </div>
+            <div className="flex justify-center gap-7">
+              {tours.map((tour) => (
+                <div key={tour.name} className="w-64 shadow-lg bg-white">
+                  <div className="w-full p-4 font-medium text-sm text-center">{tour.name}</div>
+                  <div className="border mx-4 border-yellow-200 mb-5" />
+                  <div className="w-full">
+                    {tour.countries.map((country) => (
+                      <div
+                        key={country.value}
+                        className="w-full py-2 px-4 flex justify-between items-center hover:cursor-pointer hover:bg-zinc-100"
+                      >
+                        <span className="text-xs text-zinc-500">{country.value}</span>
+                        <span className="text-xs px-2 py-1 border">{country.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-full mb-20">
+            <div className="w-full text-center mb-20">
+              <h1 className="text-4xl font-medium">Қолданушыларымыздың пікірлері</h1>
+              <p className="text-xs mt-3 text-zinc-500">
+                Кіннің шығуы мен батуы барб олардың ешқайсысын өткізіп алмаңыз
+              </p>
+            </div>
+            <div className="w-full flex flex-col lg:flex-row justify-center gap-7">
+              <div className="max-w-lg p-4 shadow-lg bg-white flex justify-center gap-4">
+                <div>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatarIcon}
+                    alt="Logo"
+                    className=" rounded-full object-center"
+                  />
+                </div>
+                <div>
+                  <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
+                    Отличный уютный аэропорт , особенно удобный вип зал , который можно оплатить
+                    отдельно, ожидание рейса проходит комфортно и сотрудники буквально за руки взяли
+                    и с сумками отнесли в минивей к самолету
+                  </p>
+                  <div>
+                    <div className="pt-2 pb-1 font-medium">Алмақызы E.</div>
+                    <div className="flex">
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-zinc-500" />
+                      <StarIcon className="w-3 text-zinc-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-lg p-4 shadow-lg bg-white flex justify-center gap-4">
+                <div>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatarIcon}
+                    alt="Logo"
+                    className=" rounded-full object-center"
+                  />
+                </div>
+                <div>
+                  <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
+                    Все удобно и современно, обменник на выходе из зелёной зоны справа, работает
+                    круглосуточно, вроде как. . Такси советую заказывать в Яндексе, до города
+                    далеко, у некоторых ребят с аэропорта есть приложения, которые работают как
+                    таксометр, но накручивают нереальные суммы)) Ну и, если большой ажиотаж на
+                    парковке,
+                  </p>
+                  <div>
+                    <div className="pt-2 pb-1 font-medium">Гүлфайруз К.</div>
+                    <div className="flex">
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-[500px] flex items-center justify-center">
+            <div className="w-full">
+              <h1 className="text-4xl w-96 line-clamp-2 font-medium">
+                Сұрағыңызға жауап таппадығыз ба?
+              </h1>
+              <p className="text-sm mt-4 mb-14 text-zinc-500">Бізге хат қалдырңыз</p>
+              <Link href="/contact-us">
+                <span className="px-6 py-2.5 bg-[#4F4610] text-white">БАЙЛАНЫСУ</span>
+              </Link>
+            </div>
+            <div
+              className="w-[960px]  h-[500px] left-1/2 overflow-hidden absolute flex justify-center items-center"
+              style={{
+                backgroundImage: `url(${istock})`,
+              }}
+            />
+          </div>
+        </div>
       </div>
     </main>
   );
