@@ -1,6 +1,7 @@
 import { StarIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+import Table from './ui/table';
 
 const icon = '/peakpx.jpg';
 const paragvai = '/paragvai.jpg';
@@ -59,48 +60,12 @@ export default function Home() {
             <p className="text-sm opacity-80">Сіздің саяхатыңызды сәтті өткізу үшін</p>
             <h1 className="text-5xl">БІЗДІҢ ӘУЕЖАЙ</h1>
           </div>
-          <form className="bg-white w-[19rem] flex flex-col items-center px-8 py-8 text-xs text-zinc-600">
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Қайдан?</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Қайда?</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Бару күні:</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Қайту күні:</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Ересек адамдар саны:</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Балалар саны:</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Атыңыз:</label>
-              <input className="w-full p-1" />
-            </div>
-            <div className="flex items-center gap-4 border-t py-2.5 w-full">
-              <label className="whitespace-nowrap flex-shrink-0">Телефон номеріңіз:</label>
-              <input className="w-full p-1" />
-            </div>
-            <button className="px-6 py-2.5 mt-1 bg-amber-400 text-sm w-fit text-white uppercase">
-              Брондау
-            </button>
-          </form>
+          <Table />
         </div>
       </div>
       <div className="relative overflow-hidden">
-        <div className="w-full lg:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-col gap-32 mx-auto">
-          <div className="w-full mt-24 mb-20">
+        <div className="w-full lg:w-10/12 xl:w-8/12 2xl:w-7/12 flex flex-col gap-16 mx-auto">
+          <div className="w-full mt-20 mb-16">
             <div className="w-full text-center mb-16">
               <h1 className="text-4xl font-medium">Сұранысқа ие елді мекендер</h1>
               <p className="text-xs mt-3 text-zinc-500">
@@ -108,43 +73,61 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center gap-5">
-              <div className="relative">
+              <div className="w-[300px] relative shadow-lg rounded-lg overflow-hidden">
                 <Image
                   width={300}
                   height={197.66}
                   src={paragvai}
-                  alt="Logo"
+                  alt="Таудағы өзен"
                   className="object-center"
                 />
                 <div className="absolute flex flex-col text-white top-20 left-[6rem] text-center">
                   <span className="font-medium">Таудағы өзен</span>
                   <span className="text-xs">Парагвай</span>
                 </div>
+                <div className="bg-white p-3 text-center text-zinc-500 text-sm">
+                  Парагвайдың керемет табиғаты, таза ауа және әсем өзендері кез келген саяхатшының
+                  жүрегін жаулайды.
+                </div>
               </div>
-              <div className="relative">
-                <Image width={300} height={150} src={paris} alt="Logo" className="object-center" />
+              <div className="w-[300px] relative shadow-lg rounded-lg overflow-hidden">
+                <Image
+                  width={300}
+                  height={150}
+                  src={paris}
+                  alt="Арман қала"
+                  className="object-center"
+                />
                 <div className="absolute flex flex-col text-white top-20 left-[6.5rem] text-center">
                   <span className="font-medium">Арман қала</span>
                   <span className="text-xs">Париж</span>
                 </div>
+                <div className="bg-white p-3 text-center text-zinc-500 text-sm">
+                  Париж - махаббат қаласы. Мұнда Эйфель мұнарасы, Лувр мұражайы және басқа да тарихи
+                  ескерткіштер бар.
+                </div>
               </div>
-              <div className="relative">
+              <div className="w-[300px] relative shadow-lg rounded-lg overflow-hidden">
                 <Image
                   width={300}
                   height={150}
                   src={shrilanka}
-                  alt="Logo"
+                  alt="Бұлтты таулар"
                   className="object-center"
                 />
                 <div className="absolute flex flex-col text-white top-20 left-[6rem] text-center">
                   <span className="font-medium">Бұлтты таулар</span>
                   <span className="text-xs">Шри Ланка</span>
                 </div>
+                <div className="bg-white p-3 text-center text-zinc-500 text-sm">
+                  Шри Ланка - экзотикалық арал мемлекеті. Мұнда сіз алтын жағалаулар мен керемет
+                  табиғатты таба аласыз.
+                </div>
               </div>
             </div>
           </div>
           <div className="w-full mb-16">
-            <div className="w-full text-center mb-20">
+            <div className="w-full text-center mb-16">
               <h1 className="text-4xl font-medium">Біз сізге ең арзан бағаларды ұсынамыз</h1>
               <p className="text-xs mt-3 text-zinc-500">
                 Саяхат адамның барлық эмойияларын ұлғайтуға бейім (Питкр Хиг)
@@ -170,14 +153,14 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="w-full mb-20">
+          <div className="w-full mb-16">
             <div className="w-full text-center mb-20">
               <h1 className="text-4xl font-medium">Қолданушыларымыздың пікірлері</h1>
               <p className="text-xs mt-3 text-zinc-500">
                 Кіннің шығуы мен батуы барб олардың ешқайсысын өткізіп алмаңыз
               </p>
             </div>
-            <div className="w-full flex flex-col lg:flex-row justify-center gap-7">
+            <div className="w-full flex flex-wrap lg:flex-row justify-center gap-7">
               <div className="max-w-lg p-4 shadow-lg bg-white flex justify-center gap-4">
                 <div>
                   <Image
@@ -185,17 +168,70 @@ export default function Home() {
                     height={40}
                     src={avatarIcon}
                     alt="Logo"
-                    className=" rounded-full object-center"
+                    className="rounded-full object-center"
                   />
                 </div>
                 <div>
                   <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
-                    Отличный уютный аэропорт , особенно удобный вип зал , который можно оплатить
-                    отдельно, ожидание рейса проходит комфортно и сотрудники буквально за руки взяли
-                    и с сумками отнесли в минивей к самолету
+                    Керемет әуежай! Қызмет көрсету жоғары деңгейде, және барлық қызметкерлер өте
+                    сыпайы. Менің рейсім жайлы барлық ақпаратты алдын ала хабарлап отырды.
                   </p>
                   <div>
-                    <div className="pt-2 pb-1 font-medium">Алмақызы E.</div>
+                    <div className="pt-2 pb-1 font-medium">Айдос Н.</div>
+                    <div className="flex">
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-zinc-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-lg p-4 shadow-lg bg-white flex justify-center gap-4">
+                <div>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatarIcon}
+                    alt="Logo"
+                    className="rounded-full object-center"
+                  />
+                </div>
+                <div>
+                  <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
+                    Әуежай өте таза және жайлы. Күту залында бос уақыт өткізу үшін барлық жағдай
+                    жасалған. Тағамдары да дәмді.
+                  </p>
+                  <div>
+                    <div className="pt-2 pb-1 font-medium">Аяжан М.</div>
+                    <div className="flex">
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-yellow-500" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="max-w-lg p-4 shadow-lg bg-white flex justify-center gap-4">
+                <div>
+                  <Image
+                    width={40}
+                    height={40}
+                    src={avatarIcon}
+                    alt="Logo"
+                    className="rounded-full object-center"
+                  />
+                </div>
+                <div>
+                  <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
+                    Барлығы керемет, бірақ кейбір қызметтер қымбат. Дегенмен, жалпы сапарды өткізуге
+                    жайлы әуежай.
+                  </p>
+                  <div>
+                    <div className="pt-2 pb-1 font-medium">Ерболат К.</div>
                     <div className="flex">
                       <StarIcon className="w-3 text-yellow-500" />
                       <StarIcon className="w-3 text-yellow-500" />
@@ -213,25 +249,22 @@ export default function Home() {
                     height={40}
                     src={avatarIcon}
                     alt="Logo"
-                    className=" rounded-full object-center"
+                    className="rounded-full object-center"
                   />
                 </div>
                 <div>
                   <p className="w-80 xl:w-96 h-10 text-zinc-500 line-clamp-2 text-sm">
-                    Все удобно и современно, обменник на выходе из зелёной зоны справа, работает
-                    круглосуточно, вроде как. . Такси советую заказывать в Яндексе, до города
-                    далеко, у некоторых ребят с аэропорта есть приложения, которые работают как
-                    таксометр, но накручивают нереальные суммы)) Ну и, если большой ажиотаж на
-                    парковке,
+                    Әуежай қызметі өте жақсы, бірақ рейсім кешігіп келді. Қызметкерлер мәселені
+                    шешуге тырысты, бірақ уақытында ұшып шығу мүмкін болмады.
                   </p>
                   <div>
-                    <div className="pt-2 pb-1 font-medium">Гүлфайруз К.</div>
+                    <div className="pt-2 pb-1 font-medium">Бақытжан С.</div>
                     <div className="flex">
                       <StarIcon className="w-3 text-yellow-500" />
                       <StarIcon className="w-3 text-yellow-500" />
                       <StarIcon className="w-3 text-yellow-500" />
                       <StarIcon className="w-3 text-yellow-500" />
-                      <StarIcon className="w-3 text-yellow-500" />
+                      <StarIcon className="w-3 text-zinc-500" />
                     </div>
                   </div>
                 </div>
@@ -241,7 +274,7 @@ export default function Home() {
           <div className="h-[500px] flex items-center justify-center">
             <div className="w-full">
               <h1 className="text-4xl w-96 line-clamp-2 font-medium">
-                Сұрағыңызға жауап таппадығыз ба?
+                Сұрағыңызға жауап таппадыңыз ба?
               </h1>
               <p className="text-sm mt-4 mb-14 text-zinc-500">Бізге хат қалдырңыз</p>
               <Link href="/contact-us">

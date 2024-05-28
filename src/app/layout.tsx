@@ -17,8 +17,8 @@ export default function RootLayout({
       <body className="flex justify-center bg-slate-50">
         <div className="w-[1920px]">
           <NavBar />
-          {children}
-          <footer className="h-20 bg-black"></footer>
+          <div className="min-h-screen">{children}</div>
+          <footer className="bottom-0 h-20 bg-black"></footer>
         </div>
       </body>
     </html>

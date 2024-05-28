@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <main>
       <PageHeader navName="Демалыс Туралары" linkName="Демалыс Туралары" />
-      <div className="flex flex-col gap-20 justify-center items-center my-24 mx-auto lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+      <div className="flex flex-col gap-16 justify-center items-center my-16 mx-auto lg:w-10/12 xl:w-8/12 2xl:w-7/12">
         <div className="flex flex-col gap-4 text-center">
           <h1 className="text-4xl font-medium">Ең танымал демалыс турлары</h1>
           <p className="text-sm text-zinc-500">

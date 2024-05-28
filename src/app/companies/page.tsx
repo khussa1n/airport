@@ -5,17 +5,17 @@ const companies = new Map<string, string>([
   ['/air-astana.jpeg', 'Air Astana'],
   ['/asiana-airlines.jpg', 'Asiana Airlines'],
   ['/turkish-airlines.jpg', 'Turkish Airlines'],
+  ['/aeroflot.jpg', 'Aeroflot'],
+  ['/lufthansa.webp', 'Lufthansa'],
+  ['/flydubai.jpg', 'Fly Dubai'],
 ]);
 
 export default function Page() {
   return (
     <main>
       <PageHeader navName="Әуе компаниялары" linkName="Әуе компаниялары" />
-      <div className="flex flex-col gap-20 justify-center items-center my-24 mx-auto lg:w-10/12 xl:w-8/12 2xl:w-7/12">
-        <div className="flex flex-col gap-4 text-center">
-          <h1 className="text-4xl font-medium">Қазақстандағы ең танымал әуе компаниялары</h1>
-          <p className="text-sm text-zinc-500"></p>
-        </div>
+      <div className="flex flex-col gap-16 justify-center items-center my-16 mx-auto lg:w-10/12 xl:w-8/12 2xl:w-7/12">
+        <h1 className="text-4xl font-medium">Қазақстандағы ең танымал әуе компаниялары</h1>
         <div className="grid grid-cols-3 gap-7">
           {Array.from(companies).map(([key, value]) => (
             <div key={key} className="w-[300px] flex flex-col gap-5 bg-white shadow-lg">

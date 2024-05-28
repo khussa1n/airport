@@ -4,12 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-const icon = '/Alalogo_new.png';
+const icon = '/Alalogo.png';
 
 const nav = new Map<string, string>([
   ['БАСТАПҚЫ', '/'],
   ['БІЗ ЖАЙЫНДА', '/about'],
-  ['ЕЛДЕР', '/countries'],
   ['ДЕМАЛЫС ТУРЛАРЫ', '/tours'],
   ['ӘУЕ КОМПАНИЯЛАРЫ', '/companies'],
   ['БАЙЛАНЫС', '/contact-us'],
