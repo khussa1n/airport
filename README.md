@@ -1,7 +1,5 @@
 # Әуежайдың ақпараттық жүйесінің ішкі жүйесі
 
-[Сайтқа сілтеме](https://almaty-airport.netlify.app)
-
 ## Getting Started
 
 First, run the development server:
