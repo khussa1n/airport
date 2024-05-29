@@ -1,12 +1,7 @@
-# Әуежайдың ақпараттық жүйесінің ішкі жүйесін құру
+# Әуежайдың ақпараттық жүйесінің ішкі жүйесі
 
 [Сайтқа сілтеме](https://almaty-airport.netlify.app)
 
-## Қолданылған құралдар:
-
-- Next.js
-- TypeScript
-- Tailwind CSS
 ## Getting Started
 
 First, run the development server:
